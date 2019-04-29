@@ -1,14 +1,90 @@
-# Compiled class file
+# Java #
 *.class
+.mtj.tmp/
+*.jar
+*.war
+*.ear
+hs_err_pid*
 
-# Log file
+# Log file #
 *.log
 
-# BlueJ files
+# BndTools #
+*/generated/buildfiles
+*/generated/launch.bndrun.resolved
+
+# Maven #
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+application.properties
+*.mvn
+
+# Eclipse #
+blog/bin/
+local.properties
+bin/
+tmp/
+.DS_Store
+.metadata
+.loadpath
+.recommenders
+.classpath
+.project
+**/.project
+**/.classpath
+**/.settings/
+**/.tern-project
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Library #
+.settings/
+.sts4-cache/
+
+# BlueJ files #
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# Gradle #
+*.gradle/
+*gradle/
+build.gradle
+gradlew
+gradlew.bat
+
+# IntelliJ IDEA #
+*.iml
+.idea/
+*.ipr
+*.iws
+out/
+.idea_modules/
+
+# Mobile Tools for Java (J2ME) #
 .mtj.tmp/
+
+# STS #
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+*/HELP.md
+
+# NetBeans #
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
 
 # Package Files #
 *.jar
@@ -18,6 +94,14 @@
 *.zip
 *.tar.gz
 *.rar
+!.mvn/wrapper/maven-wrapper.jar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# VSCode #
+*.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml #
 hs_err_pid*
