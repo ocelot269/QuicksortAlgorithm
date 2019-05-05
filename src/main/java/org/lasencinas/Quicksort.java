@@ -4,10 +4,12 @@ public class Quicksort {
 
     public static void sort(int array[]) {
 
-        int leftIndex = 0;
-        int rightIndex = array.length - 1;
+        int beginningIndex = 0;
+        int lastIndex = array.length - 1;
         int pivot = array[array.length / 2];
-        int aux = 0;
+
+        int leftIndex = beginningIndex;
+        int rightIndex = lastIndex;
 
         while (leftIndex < rightIndex) {
             while (array[leftIndex] <= pivot && leftIndex < rightIndex) {
@@ -17,12 +19,16 @@ public class Quicksort {
                 leftIndex++;
             }
             if (leftIndex < rightIndex) {
-                aux = array[leftIndex];
-                array[leftIndex] = array[rightIndex];
-                array[rightIndex] = aux;
+                Quicksort.swap(array, leftIndex, rightIndex);
             }
         }
-        array[leftIndex] = array[rightIndex];
+        array[beginningIndex] = array[rightIndex];
         array[rightIndex] = pivot;
+    }
+
+    public static void swap(int array[], int i, int j) {
+        int aux = array[i];
+        array[i] = array[j];
+        array[i] = aux;
     }
 }
