@@ -2,14 +2,12 @@ package org.lasencinas;
 
 public class Quicksort {
 
-    public static void sort(int array[]) {
+    public static void sort(int array[], int firstIndex, int lastIndex) {
 
-        int beginningIndex = 0;
-        int lastIndex = array.length - 1;
-        int pivot = array[array.length / 2];
-
-        int leftIndex = beginningIndex;
+        int pivot = array[firstIndex];
+        int leftIndex = firstIndex;
         int rightIndex = lastIndex;
+        int aux;
 
         while (leftIndex < rightIndex) {
             while (array[leftIndex] <= pivot && leftIndex < rightIndex) {
@@ -19,16 +17,17 @@ public class Quicksort {
                 rightIndex--;
             }
             if (leftIndex < rightIndex) {
-                Quicksort.swap(array, leftIndex, rightIndex);
+                aux = array[leftIndex];
+                array[leftIndex] = array[rightIndex];
+                array[rightIndex] = aux;
             }
         }
-        array[beginningIndex] = array[rightIndex];
+        array[firstIndex] = array[rightIndex];
         array[rightIndex] = pivot;
-    }
 
-    public static void swap(int array[], int i, int j) {
-        int aux = array[i];
-        array[i] = array[j];
-        array[i] = aux;
+        if (firstIndex < rightIndex - 1)
+            sort(array, firstIndex, rightIndex - 1);
+        if (rightIndex + 1 < lastIndex)
+            sort(array, rightIndex + 1, lastIndex);
     }
 }
