@@ -16,7 +16,7 @@ public class Quicksort {
                 leftIndex++;
             }
             while (array[rightIndex] > pivot) {
-                leftIndex++;
+                rightIndex--;
             }
             if (leftIndex < rightIndex) {
                 Quicksort.swap(array, leftIndex, rightIndex);
