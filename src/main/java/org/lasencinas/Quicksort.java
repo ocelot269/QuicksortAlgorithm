@@ -30,7 +30,6 @@ public class Quicksort {
     public static int partition(int array[], int start, int end) {
         int pivot = array[end];
         int referenceIndex = start;
-
         for (int index = start; index < end; index++) {
 
             if (array[index] <= pivot) {
@@ -39,7 +38,6 @@ public class Quicksort {
             }
         }
         swap(array, referenceIndex, pivot);
-
         return referenceIndex;
     }
 
