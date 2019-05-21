@@ -22,14 +22,4 @@ public class Task {
     public int getFinalPos() {
         return finalPos;
     }
-
-
-    /* ---- Setters ---- */
-    public void setInitPos(int initPos) {
-        this.initPos = initPos;
-    }
-
-    public void setFinalPos(int finalPos) {
-        this.finalPos = finalPos;
-    }
 }
