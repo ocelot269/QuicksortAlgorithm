@@ -19,15 +19,15 @@ public class Quicksort {
             stack.pop();
 
             // Reorganize the elements across the pivot
-            int pivot = partition(array, start, end);
+            int posPivot = partition(array, start, end);
 
             //we push sub-array indices containing elements lesser than pivot
-            if (pivot - 1 > start) {
-                stack.push(new Task(start, pivot - 1));
+            if (posPivot - 1 > start) {
+                stack.push(new Task(start, posPivot - 1));
             }
             //we push sub-array indices containing elements greater than pivot
-            else if (pivot + 1 < end) {
-                stack.push(new Task(pivot + 1, end));
+            else if (posPivot + 1 < end) {
+                stack.push(new Task(posPivot + 1, end));
             }
         }
     }
